@@ -1,14 +1,38 @@
 [project]
 name = "meshtastic-mcp"
 version = "0.1.0"
-description = "MCP server for interacting with Meshtastic devices over USB/serial."
+description = "Model Context Protocol server that lets LLM agents discover, connect to, and operate Meshtastic LoRa radios over USB/serial — list devices, inspect mesh nodes, send text messages, read telemetry, trace routes, and reboot."
+readme = "README.md"
 requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "probsJustin", email = "justinshagerty@gmail.com" },
+]
+keywords = ["mcp", "meshtastic", "lora", "mesh", "radio", "usb", "serial", "llm", "agent"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Communications :: Ham Radio",
+    "Topic :: System :: Hardware",
+]
 dependencies = [
     "mcp>=1.2.0",
     "meshtastic>=2.5.0",
     "pyserial>=3.5",
     "pypubsub>=4.0.3",
 ]
+
+[project.urls]
+Homepage = "https://github.com/probsJustin/meshtastic_mcp"
+Repository = "https://github.com/probsJustin/meshtastic_mcp"
+Issues = "https://github.com/probsJustin/meshtastic_mcp/issues"
 
 [project.scripts]
 meshtastic-mcp = "meshtastic_mcp.server:main"
